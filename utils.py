@@ -44,7 +44,7 @@ def create_sample_neural_network():
     """
     Create a simple neural network visualization for educational purposes
     """
-    # Using sklearn's MLPClassifier as a replacement for TensorFlow model
+    
     from sklearn.neural_network import MLPClassifier
     
     model = MLPClassifier(

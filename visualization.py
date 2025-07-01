@@ -19,7 +19,7 @@ def plot_training_history(history):
     # If there are metrics for multiple epochs, we can plot them
     # Otherwise, we'll just show the single values as horizontal lines
     
-    # Check if we have a TensorFlow history object or our custom dictionary
+    
     if isinstance(history, dict):
         # Our scikit-learn dictionary with single values
         # Accuracy plot
@@ -30,7 +30,7 @@ def plot_training_history(history):
         ax[1].axhline(y=history['loss'][0], color='blue', linestyle='-', label='Training Loss')
         ax[1].axhline(y=history['val_loss'][0], color='orange', linestyle='-', label='Validation Loss')
     else:
-        # TensorFlow history object
+        
         # Accuracy plot
         ax[0].plot(history.history['accuracy'], label='Training Accuracy')
         ax[0].plot(history.history['val_accuracy'], label='Validation Accuracy')
